@@ -8,6 +8,7 @@ export default function Card(props) {
     composition,
     portions,
     weight,
+    unit,
     desription
   } = data;
   const headingHovered = data['heading-hovered-selected']

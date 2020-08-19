@@ -9,6 +9,7 @@
     "mouse-count": "1",
     "word-forms": "мышь, мыши, мышей",
     "weight": "0.5",
+    "unit":"кг",
     "desription": "Чего сидишь? Порадуй котэ,",
     "desription-link": "купи",
     "selected-desription": "Печень утки разварная с артишоками."
@@ -23,6 +24,7 @@
     "mouse-count": "2",
     "mouse-word-forms": "мышь, мыши, мышей",
     "weight": "2",
+    "unit":"кг",
     "desription": "Чего сидишь? Порадуй котэ,",
     "desription-link": "купи",
     "selected-desription": "Головы щучьи с чесноком да свежайшая сёмгушка."
@@ -37,6 +39,7 @@
     "mouse-count": "1",
     "word-forms": "мышь, мыши, мышей",
     "weight": "0.5",
+    "unit":"кг",
     "desription": "Чего сидишь? Порадуй котэ",
     "desription-link": "купи",
     "selected-desription": "Филе из цыплят с трюфелями в бульоне."
