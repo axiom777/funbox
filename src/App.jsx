@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import cardsData from './config.json'
+import cardsData from "./cards-data.json";
 import Card from "./components/Card/Card.jsx";
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
       <div className="wrapper">
         <div className="header"></div>
         <div className="cards">
-          {cardsData.map(cardData => <Card data={cardData}/>)}
+          {cardsData.map((cardData, index) => (
+            <Card key={index} data={cardData} />
+          ))}
         </div>
       </div>
     </div>
