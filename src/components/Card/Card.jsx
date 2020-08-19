@@ -64,7 +64,7 @@ export default function Card(props) {
       case "active":
         return selectedDesctiprion;
       case "disabled":
-        return <>Печалька {composition} закончился.</>;
+        return <>Печалька, {composition} закончился.</>;
       default:
         return (
           <>

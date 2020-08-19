@@ -1,13 +1,15 @@
 $color-default: #1698d9;
 $color-red: #d91667;
-$color-disable: #b3b3b3;
+$color-disabled: #b3b3b3;
 $border-width: 4px;
 $bora: 12px;
 $skew-height: 44px;
 $border: $border-width solid $color-default;
 $border-active: $border-width solid $color-red;
+$border-disabled: $border-width solid $color-disabled;
 $background: #f2f2f2;
 $margin: 20px;
+
 .card {
   &_active {
     &.card:before {
@@ -27,6 +29,39 @@ $margin: 20px;
     }
     & .card__weight {
       background: $color-red;
+    }
+  }
+  &_disabled {
+    color: $color-disabled;
+    .card__heading {
+      color: $color-disabled;
+    }
+    .card__offer {
+      color: $color-disabled;
+    }
+    &.card:before {
+      border-top: $border-disabled;
+      border-right: $border-disabled;
+    }
+    & .card__block {
+      &:before {
+        border-top: $border-disabled;
+        border-left: $border-disabled;
+      }
+      &:after {
+        border-left: $border-disabled;
+        border-right: $border-disabled;
+        border-bottom: $border-disabled;
+      }
+    }
+    & .card__weight {
+      background: $color-disabled;
+    }
+    & .card__description {
+      color: #ffff66;
+    }
+    & .card__image{
+      filter: opacity(49%);
     }
   }
   position: relative;
@@ -94,7 +129,7 @@ $margin: 20px;
     font-size: 16px;
     color: #666;
     margin-top: 5px;
-    &_hovered  {
+    &_hovered {
       color: $color-red;
     }
   }
@@ -142,7 +177,7 @@ $margin: 20px;
   }
   &__link {
     color: $color-default;
-    cursor:pointer;
+    cursor: pointer;
     border-bottom: 1px dashed $color-default;
   }
 }
