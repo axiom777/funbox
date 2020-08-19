@@ -1,0 +1,56 @@
+$border-width: 4px;
+$bora: 12px;
+$skew-height: 44px;
+$border: $border-width solid #1698d9;
+$background: #f2f2f2;
+$margin: 20px;
+.card {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background: $background;
+    border-radius: $bora;
+    width: $skew-height * 2;
+    height: $skew-height * 2;
+    border-top: $border;
+    border-right: $border;
+    top: $margin;
+    right: $margin;
+    z-index: -1;
+  }
+  &__block {
+    //background: $background;
+    margin: $margin;
+    padding: 17px 16px 10px 44px;
+    border-radius: 12px;
+    min-width: 320px;
+    min-height: 480px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: #{$margin + $skew-height / 2 + $border-width/2};
+      top: $margin;
+      width: calc(100% - #{$margin} - #{$skew-height}* 2);
+      height: 44px;
+      border-top: $border;
+      border-left: $border;
+      background: $background;
+      transform: skew(-45deg);
+      z-index: -1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background: $background;
+      border-left: $border;
+      border-right: $border;
+      border-bottom: $border;
+      left: $margin;
+      top: #{$margin + $skew-height + $border-width};
+      width: calc(100% - #{$margin + $border-width} * 2);
+      height: calc(100% - #{$margin * 2 + $skew-height +26px});
+      z-index: -1;
+    }
+  }
+}
