@@ -46,6 +46,8 @@ $margin: 20px;
       border-left: $border;
       border-right: $border;
       border-bottom: $border;
+      border-bottom-left-radius: $bora;
+      border-bottom-right-radius: $bora;
       left: $margin;
       top: #{$margin + $skew-height + $border-width};
       width: calc(100% - #{$margin + $border-width} * 2);
