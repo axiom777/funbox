@@ -70,7 +70,9 @@ export default function Card(props) {
           <>
             {" "}
             {desription}{" "}
-            <span className="card__link">{desriptionLinkText}.</span>{" "}
+            <span className="card__link" onClick={() => toggleStatus()}>
+              {desriptionLinkText}.
+            </span>{" "}
           </>
         );
     }
@@ -90,11 +92,10 @@ export default function Card(props) {
   return (
     <div
       className={getCardClass()}
-      onClick={() => toggleStatus()}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="card__block">
+      <div className="card__block" onClick={() => toggleStatus()}>
         <div className={getHeadingClasses()}>{getHeading()}</div>
         <div className="card__name">{name}</div>
         <div className="card__composition">{composition}</div>

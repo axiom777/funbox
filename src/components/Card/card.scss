@@ -142,6 +142,7 @@ $margin: 20px;
   }
   &__link {
     color: $color-default;
+    cursor:pointer;
     border-bottom: 1px dashed $color-default;
   }
 }
