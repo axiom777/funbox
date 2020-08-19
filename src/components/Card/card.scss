@@ -1,7 +1,8 @@
+$color-default: #1698d9;
 $border-width: 4px;
 $bora: 12px;
 $skew-height: 44px;
-$border: $border-width solid #1698d9;
+$border: $border-width solid $color-default;
 $background: #f2f2f2;
 $margin: 20px;
 .card {
@@ -20,8 +21,8 @@ $margin: 20px;
     z-index: -1;
   }
   &__block {
-    //background: $background;
     margin: $margin;
+    overflow: auto;
     padding: 17px 16px 10px 44px;
     border-radius: 12px;
     min-width: 320px;
@@ -54,5 +55,67 @@ $margin: 20px;
       height: calc(100% - #{$margin * 2 + $skew-height +26px});
       z-index: -1;
     }
+  }
+  &__image-wrapper {
+    position: absolute;
+    bottom: $margin + $border-width + 18px;
+    left: $margin + $border-width;
+    overflow: hidden;
+    max-width: calc(100% - #{$margin * 2 + $border-width * 2});
+    border-radius: $bora;
+  }
+  &__image {
+    transform: translate(-30px, 100px);
+  }
+  &__heading {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+  }
+  &__name {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__composition {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &__offer {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+  }
+  &__weight {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    right: 16px + $margin + $border-width;
+    bottom: 32px + $margin + $border-width;
+    background: $color-default;
+    border-radius: 50%;
+  }
+  &__weight-value {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 42px;
+  }
+  &__unit {
+    font-size: 22px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__description {
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+  }
+  &__link {
+    color: $color-default;
+    border-bottom: 1px dashed $color-default;
   }
 }
